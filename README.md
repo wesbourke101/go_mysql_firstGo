@@ -60,16 +60,37 @@ show databases;
 ```
 
 How to show users
-sel
 
 ```sql
 SELECT User, Host, Password FROM mysql.user;
 SELECT * FROM mysql.user;
 ```
 
-shows current user
+Shows current user
 
 ```sql
 select user();
 ```
+
 # go_mysql_firstGo
+
+To run this make sure you have created a db named recordings.
+
+```
+$ mysql -u root -p
+Enter password:
+```
+
+You will need to know your sql info. Then create the database
+
+```
+mysql> create database recordings;
+```
+
+from here just run
+
+```go
+go run main.go
+```
+
+if you get a user error check lines 23 and 24
